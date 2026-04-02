@@ -291,7 +291,7 @@ header form input::placeholder {
 }
 
 .header_user_profile .profile_info p {
-  font-size: 12px;
+  font-size: 10px;
   color: var(--cp-secondary-600);
 }
 
