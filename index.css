@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --cp-dark: #000000;
+  --cp-white: #ffffff;
+  --cp-background: #f8f9ff;
+  --cp-danger: red;
+
+  /* Primary Color Scheme */
+  --cp-primary: #4f46e5;
+  --cp-primary-950: #0f0069;
+  --cp-primary-900: #1d00a5;
+  --cp-primary-800: #3323cc;
+  --cp-primary-700: #4d44e3;
+  --cp-primary-600: #6760fd;
+  --cp-primary-500: #8582ff;
+  --cp-primary-400: #a4a1ff;
+  --cp-primary-300: #c3c0ff;
+  --cp-primary-200: #e2dfff;
+  --cp-primary-100: #f2efff;
+
+  /* Secondary Color Scheme */
+  --cp-secondary: #334155;
+  --cp-secondary-950: #0d1c2f;
+  --cp-secondary-900: #233144;
+  --cp-secondary-800: #3a485c;
+  --cp-secondary-700: #515f74;
+  --cp-secondary-600: #6a788e;
+  --cp-secondary-500: #8392a9;
+  --cp-secondary-400: #9eacc4;
+  --cp-secondary-300: #b9c7e0;
+  --cp-secondary-200: #d5e3fd;
+  --cp-secondary-100: #ebf1ff;
+
+  /* Tertiary Color Scheme */
+  --cp-tertiary: #0d9488;
+  --cp-tertiary-950: #00201d;
+  --cp-tertiary-900: #003732;
+  --cp-tertiary-800: #005049;
+  --cp-tertiary-700: #006a61;
+  --cp-tertiary-600: #00867b;
+  --cp-tertiary-500: #29a195;
+  --cp-tertiary-400: #4cbcaf;
+  --cp-tertiary-300: #6bd8cb;
+  --cp-tertiary-200: #89f5e7;
+  --cp-tertiary-100: #b3fff3;
+
+  /* Neutral Color Scheme */
+  --cp-neutral: #64748b;
+  --cp-neutral-950: #0b1c30;
+  --cp-neutral-900: #213145;
+  --cp-neutral-800: #38485d;
+  --cp-neutral-700: #505f76;
+  --cp-neutral-600: #68788f;
+  --cp-neutral-500: #8292aa;
+  --cp-neutral-400: #9cacc5;
+  --cp-neutral-300: #b7c8e1;
+  --cp-neutral-200: #d3e4fe;
+  --cp-neutral-100: #eaf1ff;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 10px;
+  --radius-full: 50%;
+
+  --padding-round: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  list-style-type: none;
+  text-decoration: none;
+  border: none;
+  background: none;
+  outline: none;
+
+  font-family: "Inter", sans-serif;
+}
+
+svg {
+  color: var(--cp-white);
+}
+
+/* html {
+  color: var(--cp-white);
+} */
+
+body {
+  background-color: var(--cp-background);
+}
+
+.tonal-gradient {
+  background: linear-gradient(135deg, var(--cp-primary-950) 0%, var(--cp-primary-900) 100%);
+}
+
+.root_container {
+  height: 100vh;
+
+  display: flex;
+}
+
+aside {
+  width: 20rem;
+  min-width: 20rem;
+  height: 100vh;
+  padding: var(--padding-round);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  border-right: 1px solid var(--cp-secondary-100);
+}
+
+.aside_header {
+  display: flex;
+  align-items: center;
+  gap: var(--padding-round);
+
+  padding: 10px;
+}
+
+.aside_header .tonal-gradient {
+  width: 35px;
+  height: 35px;
+  border-radius: var(--radius-md);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aside_header h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--cp-secondary-950);
+
+  line-height: 20px;
+}
+
+.aside_header span {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--cp-secondary-600);
+  text-transform: uppercase;
+}
+
+.footer-new-project {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  border-radius: var(--radius-md);
+  color: var(--cp-white);
+  padding: var(--padding-round);
+  font-size: 14px;
+}
+
+.nav_items {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.nav_items li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  color: var(--cp-secondary-600);
+  transition: background-color 0.4s ease-in-out;
+  margin-bottom: 4px;
+
+  font-weight: 500;
+}
+
+.nav_items li svg {
+  color: var(--cp-secondary-600);
+}
+
+.nav_items li.active,
+.nav_items li:hover {
+  background: var(--cp-secondary-100);
+  color: var(--cp-primary-600);
+  border-right: 3px solid var(--cp-primary-800);
+}
+
+.nav_items li.active svg,
+.nav_items li:hover svg {
+  color: var(--cp-primary-600);
+}
+
+main {
+  /* background: red; */
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  background: var(--cp-white);
+  border-bottom: 1px solid var(--cp-secondary-100);
+  padding: var(--padding-round);
+}
+
+header form {
+  padding: var(--padding-round);
+  border-radius: var(--radius-md);
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  width: 80%;
+}
+
+header form input {
+  width: 100%;
+  font-size: 14px;
+}
+
+header form input::placeholder {
+  color: var(--cp-neutral-400);
+}
+
+.header_user_info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header_user_info .header_actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header_user_info .header_actions button {
+  position: relative;
+}
+
+.header_user_info .header_actions button span {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 15px;
+  height: 15px;
+  background: var(--cp-danger);
+  border-radius: var(--radius-full);
+  color: var(--cp-white);
+
+  font-size: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_user_info > span {
+  height: 25px;
+  width: 1px;
+  background: var(--cp-secondary-100);
+}
+
+.header_user_profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header_user_profile .profile_info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.header_user_profile .profile_info h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cp-secondary-950);
+}
+
+.header_user_profile .profile_info p {
+  font-size: 12px;
+  color: var(--cp-secondary-600);
+}
+
+.header_user_profile .profile_picture {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--cp-secondary-200);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_user_profile .profile_picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-full);
+}
+
+header svg {
+  color: var(--cp-secondary-600);
+}
