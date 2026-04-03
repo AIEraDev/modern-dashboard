@@ -316,3 +316,38 @@ header form input::placeholder {
 header svg {
   color: var(--cp-secondary-600);
 }
+
+.main_upper_body_boxes {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 20px;
+  width: auto;
+}
+.box {
+  flex: 1;
+  padding: 30px;
+  background: var(--cp-secondary-100);
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 10px;
+  
+}
+.box.p{
+  font-weight: bold;
+  justify-content: left;
+}
+.box .button .span {
+  
+  top: 5px;
+  right: 5px;
+  width: 15px;
+  height: 15px;
+  background: var(--cp-danger);
+  border-radius: var(--radius-full);
+  color: var(--cp-white);
+
+  font-size: 8px;
+ 
+}
