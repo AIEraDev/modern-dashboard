@@ -5,6 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modern Dashboard Overview</title>
     <link rel="stylesheet" href="index.css" />
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2004',  1000,      400],
+          ['2005',  1170,      460],
+          ['2006',  660,       1120],
+          ['2007',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
   </head>
   <body>
     <div class="root_container">
@@ -201,8 +226,21 @@
             </div>
           </div>
 
-          <!--  -->
+          <!--central main body  -->
+          <div class="central_main_body_header">
+            <div class="central_main_body_header_side_left">
+              <h4>Monthly Revenue Trends</h4>
+              <p>Comparing current year performance</p>
+            </div>
+            <div class="central_main_body_header_side_right">
+              <span> 12M    6M    30D</span>
+            </div>
+            <div class="central_main_body_chart">
+                  <div id="curve_chart" style="width: 900px; height: 500px"></div>
 
+            </div>
+          </div>
+          <div class="central_main_body_chart"></div>
           <!--  -->
         </div>
       </main>

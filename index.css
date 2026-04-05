@@ -372,3 +372,34 @@ header svg {
   display: flex;
   align-items: center;
 }
+.central_main_body_header {
+  display: flex;
+  justify-content: space-between;
+ padding: 24px;
+  background: var(--cp-white);
+  border-radius: 10px;
+  margin-top: 10px;
+  height: 300px;
+  width: 100%;
+}
+
+.central_main_body_header_side_left .p {
+   color: var(--cp-secondary-600);
+    font-size: 13px;
+}
+
+.central_main_body_header_side_left h4 {
+  font-size: 18px;
+  color: var(--cp-secondary-950);
+}
+.central_main_body_header_side_right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--cp-secondary-300);
+  height: 20px;
+  border-radius: var(--cp-neutral-500);
+} 
+.central_main_body_header_side_right  .span {
+
+}
