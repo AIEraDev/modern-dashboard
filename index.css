@@ -319,6 +319,9 @@ header svg {
 
 .main_parent_container {
   padding: 15px;
+
+  height: calc(100vh - 4.8rem);
+  overflow-y: auto;
 }
 
 .main_upper_body_boxes {
@@ -372,11 +375,12 @@ header svg {
   display: flex;
   align-items: center;
 }
+
 .central_main_body {
   padding: 24px;
   background: var(--cp-white);
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .central_main_body_header {
@@ -432,7 +436,7 @@ header svg {
 }
 
 .time_filters_sliders .slider {
-  transform: translateX(calc(2 * 50px));
+  transform: translateX(calc(0 * 50px));
   transition: transform 0.3s ease;
 }
 
@@ -443,4 +447,116 @@ header svg {
 
   display: flex;
   align-items: center;
+}
+
+.central_main_body_chart {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.central_main_body_chart canvas {
+  display: block;
+  max-width: 100%;
+}
+
+.revenue_recent {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.revenue_recent > div {
+  background: var(--cp-white);
+  border-radius: 10px;
+  padding: 24px;
+
+  width: 100%;
+}
+
+.revenue_recent_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+}
+
+.revenue_recent_header h3 {
+  color: var(--cp-secondary-950);
+  font-size: 18px;
+}
+
+.revenue_recent_header button {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--cp-neutral-700);
+}
+
+.revenue_region_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 10px;
+}
+
+.revenue_left_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 150px;
+}
+
+.revenue_color {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+}
+
+.revenue_region_item.north_america .revenue_color,
+.revenue_region_item.north_america .revenue_progress_percentage {
+  background: var(--cp-secondary-950);
+}
+
+.revenue_region_item.europe .revenue_color,
+.revenue_region_item.europe .revenue_progress_percentage {
+  background: var(--cp-primary-600);
+}
+
+.revenue_region_item.asia .revenue_color,
+.revenue_region_item.asia .revenue_progress_percentage {
+  background: var(--cp-tertiary-400);
+}
+
+.revenue_region_item.latin_america .revenue_color,
+.revenue_region_item.latin_america .revenue_progress_percentage {
+  background: var(--cp-secondary-400);
+}
+
+.revenue_amount {
+  color: var(--cp-secondary-950);
+  font-weight: 800;
+
+  margin-left: auto;
+}
+
+.revenue_progress {
+  width: 10rem;
+  height: 10px;
+  background: var(--cp-secondary-200);
+
+  border-radius: 20px;
+  position: relative;
+
+  margin-left: 10px;
+}
+
+.revenue_progress_percentage {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  bottom: 0%;
+  border-radius: 20px;
+  background: var(--cp-dark);
 }
