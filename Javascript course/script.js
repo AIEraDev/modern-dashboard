@@ -19,7 +19,10 @@ let endDate = undefined; // undefined
 // Big Int
 const a = 4567890987654567898765n;
 const b = BigInt("4567890987654567898765");
-console.log(a);
-console.log(typeof b);
+// console.log(a);
 
 // Type coercion & typeof operator
+console.log(typeof balance); // Number
+
+// Falsy Values: 0, false, "", null, undefined, NaN
+// Truthy Values: Everything else
